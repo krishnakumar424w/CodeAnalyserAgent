@@ -1,0 +1,5 @@
+{
+  "language": "python",
+  "problem": "Given an array of integers, find the maximum subarray sum. The array may contain negative numbers. Use Kadane's algorithm which is an efficient dynamic programming approach that solves this in O(N) time and O(1) space.",
+  "code": "def maxSubArray(nums):\n    max_sum = float('-inf')\n    current_sum = 0\n    for num in nums:\n        current_sum = max(num, current_sum + num)\n        max_sum = max(max_sum, current_sum)\n    return max_sum"
+}
